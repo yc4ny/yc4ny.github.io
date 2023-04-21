@@ -29,7 +29,7 @@ about_content: | # this will include new lines to allow paragraphs
   I have previously received a B.A in Computer Science from the University of Virginia and have graduated with distinction. 
   
   My research interests are in Computer Vision and Machine Learning, especially in 3D reconstruction and Human Pose Estimation. At the moment, I am interested in mixed reality pose estimation, focusing on egocentric 3D interaction recognition.
-  Ultimately, I dream to build an AI system that can behave like humans in new environments and can interact with humans using a broad channel of nonverbal signals (kinesic signals or body languages).
+  Ultimately, I dream to build an AI system that can behave like humans in new environments and can interact with humans using a broad channel of nonverbal signals.
 
 content:
   - title: Projects # Title for the section
