@@ -1,7 +1,8 @@
 # Site
 repository: yc4ny/yc4ny.github.io
 favicon: images/Y_logo.jpeg
-
+include:
+  - "_img"
 # Content configuration version
 version: 2
 
@@ -35,7 +36,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: Stereo Reconstruction
+        title: Stereo Reconstruction <br><br><img src="images/stereo.png" width=700 height=200 alt="stereo">
         # link: github.com/sproogen
         # link_text: Project Website
         additional_links:
@@ -46,10 +47,10 @@ content:
           #   icon: fab fa-github
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
         quote: >
-          Stereo Camera Reconstruction using DLT, Triangulation with Non-Linear Optimization.
+          Stereo Camera Reconstruction using DLT, Triangulation with Non-Linear Optimization. 
         description: | # this will include new lines to allow paragraphs
           Stereo Reconstruction is an open-source project that focuses on creating a 3D reconstruction from stereo images. By leveraging the power of computer vision and deep learning techniques, the project aims to accurately estimate depth information from a pair of images captured by two cameras with a known relative position.
-
+        
   - title: Papers # Title for the section
     layout: list # Type of content section (list/text)
     content:
