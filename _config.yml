@@ -97,6 +97,20 @@ content:
           Stereo Camera Reconstruction using DLT, Triangulation with Non-Linear Optimization. 
         description: | # this will include new lines to allow paragraphs
           Stereo Reconstruction is an open-source project that focuses on creating a 3D reconstruction from stereo images. By leveraging the power of computer vision and deep learning techniques, the project aims to accurately estimate depth information from a pair of images captured by two cameras with a known relative position.
+      
+      - layout: top-middle
+        title: SMPL Parameter Optimizer <br><br><img src="images/smpl.jpg" width=150 height=300 alt="smpl">
+        # link: github.com/sproogen
+        # link_text: Project Website
+        additional_links:
+          - title:  SMPL Parameter Optimizer
+            icon: fab fa-github
+            url: https://github.com/yc4ny/SMPL-Optimization
+        quote: >
+          Optimizing SMPL(Skinned Multi-Person Linear Model) Parameters
+        description: | # this will include new lines to allow paragraphs
+          SMPL Optimization is an open-source project that focuses on optimizing the Skinned Multi-Person Linear (SMPL) model, a widely-used 3D human body representation. By employing advanced optimization techniques, machine learning, and computer graphics methods, this project aims to enhance the SMPL model's performance, accuracy, and efficiency for various applications.
+      
       - layout: top-middle
         title: Age Classifier <br><br><img src="images/age.png" width=300 height=250 alt="age">
         # link: github.com/sproogen
@@ -109,6 +123,7 @@ content:
           Age Detection Model Trained on Pytorch
         description: | # this will include new lines to allow paragraphs
           Age Classifier is an open-source project that focuses on predicting a person's age based on facial features. Utilizing deep learning and convolutional neural networks (CNN), the project aims to create an accurate and efficient age estimation model that can be applied to various applications.
+     
       - layout: top-middle
         title: Panorama Generator <br><br> <img src="images/panorama.png" width=400 height=200 alt="panorama">
         # link: github.com/sproogen
@@ -121,6 +136,7 @@ content:
           Panorama image generator using multiple images with a single camera.
         description: | # this will include new lines to allow paragraphs
          Panorama Generator is an open-source project aimed at stitching together multiple images to create seamless, high-resolution panoramas. By employing advanced image processing and computer vision techniques, the project can combine a series of overlapping images taken from different viewpoints to produce a single, wide-angle panoramic image.
+     
       - layout: top-middle
         title: Mining Real World Graphs <br><br> <img src="images/graph.png" width=400 height=200 alt="panorama">
         # link: github.com/sproogen
