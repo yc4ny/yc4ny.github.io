@@ -44,7 +44,7 @@ content:
 
           Advisor: Hanbyul Joo
 
-          Coursework: 3D Computer Vision, Advanced Graphics, Advanced Data Mining, Mobile and Ubiquitous Computing
+          Major Coursework: 3D Computer Vision, Advanced Graphics, Advanced Data Mining, Mobile and Ubiquitous Computing
 
       - layout: left
         title: University of Virginia
@@ -52,7 +52,7 @@ content:
         sub_title: B.A Computer Science
         description: | # this will include new lines to allow paragraphs
           LSAC GPA: <b>3.93/4.0(4.22/4.3)</b> - 142 credits<br>
-          Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
+          Major Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
@@ -121,7 +121,19 @@ content:
           Panorama image generator using multiple images with a single camera.
         description: | # this will include new lines to allow paragraphs
          Panorama Generator is an open-source project aimed at stitching together multiple images to create seamless, high-resolution panoramas. By employing advanced image processing and computer vision techniques, the project can combine a series of overlapping images taken from different viewpoints to produce a single, wide-angle panoramic image.
-      
+      - layout: top-middle
+        title: Mining Real World Graphs <br><br> <img src="images/graph.png" width=400 height=200 alt="panorama">
+        # link: github.com/sproogen
+        # link_text: Project Website
+        additional_links:
+          - title:  Panorama Generator
+            icon: fab fa-github
+            url: https://github.com/yc4ny/Mining-Real-World-Graphs
+        quote: >
+          Partitioning Real World Graphs with Label Propagation for Community Detection
+        description: | # this will include new lines to allow paragraphs
+         Mining Real-World Graphs is an open-source project that focuses on the analysis and processing of large-scale, real-world graph data. Leveraging state-of-the-art graph algorithms, data mining techniques, and network analysis tools, this project aims to uncover insights and patterns within complex, interconnected data structures.
+        
 
 
 # Footer
