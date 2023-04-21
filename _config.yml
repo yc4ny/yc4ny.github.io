@@ -62,10 +62,10 @@ content:
         # link_text: boringcompany.com
         sub_title: Graduate Researcher
         caption: November 2021 - Present
-        quote: >
-          The Visual Computing Laboratory aims to enable machines and robots to have human-like visual intelligence, conducting research at the intersection of computer vision, machine learning, artificial intelligence, and graphics.
         description: | # this will include new lines to allow paragraphs
-            TA for 3D Computer Vision (Spring 2022)
+            About: The Visual Computing Laboratory aims to enable machines and robots to have human-like visual intelligence, conducting research at the intersection of computer vision, machine learning, artificial intelligence, and graphics.
+
+            TA: 3D Computer Vision (Spring 2022)
 
             Research Area: 3D Reconstruction and Human Pose Estimation
 
