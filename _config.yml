@@ -1,56 +1,34 @@
 # Site
-repository: sproogen/resume-theme
+repository: yc4ny/yc4ny.github.io
 favicon: images/favicon.ico
 
 # Content configuration version
 version: 2
 
 # Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+name: Yonwoo Choi
+title: Computer Science Graduate
+email: yhugestar@snu.ac.kr
+# website: www.github.com/sproogen/resume-theme
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-twitter_username: facespics
-github_username:  sproogen
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
-# xing_username: jekyll
-# pinterest_username: jekyll
-youtube_username: globalmtb
-# googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
-
-# Additional icon links
-additional_links:
-- title: itsgoingto.be
-  icon: fas fa-globe
-  url: https://www.itsgoingto.be
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+twitter_username: 00w_ony
+github_username:  yc4ny
+instagram_username: y0n_wo0
+linkedin_username: yonwoo-choi
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/profile_pic2.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
-
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+  I am currently pursuing a M.S in Computer Science at Seoul National University working in the Visual Computing Lab, where I am fortunate to be advised by <a href="https://jhugestar.github.io/">Hanbyul Joo</a>. 
+  I have previously received a B.A in Computer Science from the University of Virginia and have graduated with distinction. 
+  
+  My research interests are in Computer Vision and Machine Learning, especially in 3D reconstruction and Human Pose Estimation. At the moment, I am interested in mixed reality pose estimation, focusing on egocentric 3D interaction recognition.
+  Ultimately, I dream to build an AI system that can behave like humans in new environments and can interact with humans using a broad channel of nonverbal signals (kinesic signals or body languages).
 
 content:
   - title: Projects # Title for the section
@@ -72,6 +50,19 @@ content:
         description: | # this will include new lines to allow paragraphs
           I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
 
+  - title: Papers # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: 
+        # link: boringcompany.com
+        # # link_text: boringcompany.com
+        # sub_title: Senior Network System Administrator
+        # caption: November 2017 - Present
+        # quote: >
+        #   Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
+        # description: | # this will include new lines to allow paragraphs
+
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -90,27 +81,26 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Harvard University
-        caption: 2010 - 2013
-        sub_title: BSc Computer Science
+        title: Seoul National University
+        caption: Class of 2024
+        sub_title: M.S Computer Science and Engineering
         quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+          In 1946, Seoul National University was established as a pioneering institution, with a mission to drive human knowledge, nurture innovative leaders, and contribute to an enlightened society. As South Korea's flagship university, SNU is dedicated to fostering intellectual curiosity, academic excellence, and global citizenship, ensuring its continued prominence in Asia and around the world.
         description: | # this will include new lines to allow paragraphs
-          During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+          Affiliation: Visual Computing Lab 
 
-          I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
+          Advisor: Hanbyul Joo
 
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+          Coursework: 3D Computer Vision, Advanced Graphics, Advanced Data Mining, Mobile and Ubiquitous Computing
 
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+      - layout: left
+        title: University of Virginia
+        caption: Class of 2021
+        sub_title: B.A Computer Science
+        quote: >
+          In 1819, Thomas Jefferson founded the University of Virginia and inaugurated a bold experiment – a public university designed to advance human knowledge, educate leaders and cultivate an informed citizenry.
+        description: | # this will include new lines to allow paragraphs
+          Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
 # Footer
 footer_show_references: true
