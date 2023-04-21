@@ -99,6 +99,19 @@ content:
           Stereo Reconstruction is an open-source project that focuses on creating a 3D reconstruction from stereo images. By leveraging the power of computer vision and deep learning techniques, the project aims to accurately estimate depth information from a pair of images captured by two cameras with a known relative position.
       
       - layout: top-middle
+        title: Structure from Motion <br><br><img src="images/sfm.png" width=400 height=200 alt="sfm,">
+        # link: github.com/sproogen
+        # link_text: Project Website
+        additional_links:
+          - title:  Structure from Motion
+            icon: fab fa-github
+            url: https://github.com/yc4ny/Structure-From-Motion
+        quote: >
+          Estimating the 3-D structure of a scene from a set of 2-D images
+        description: | # this will include new lines to allow paragraphs
+          Structure From Motion (SFM) is an open-source project that focuses on reconstructing the 3D structure of a scene from a sequence of 2D images. By leveraging computer vision, image processing, and machine learning techniques, the project aims to accurately estimate the camera's motion and the 3D positions of scene points from a series of images captured at different viewpoints.
+
+      - layout: top-middle
         title: SMPL Parameter Optimizer <br><br><img src="images/smpl.png" width=300 height=300 alt="smpl">
         # link: github.com/sproogen
         # link_text: Project Website
@@ -138,7 +151,7 @@ content:
          Panorama Generator is an open-source project aimed at stitching together multiple images to create seamless, high-resolution panoramas. By employing advanced image processing and computer vision techniques, the project can combine a series of overlapping images taken from different viewpoints to produce a single, wide-angle panoramic image.
      
       - layout: top-middle
-        title: Mining Real World Graphs <br><br> <img src="images/graph.png" width=400 height=200 alt="panorama">
+        title: Mining Real World Graphs <br><br> <img src="images/graph.png" width=400 height=200 alt="graph">
         # link: github.com/sproogen
         # link_text: Project Website
         additional_links:
