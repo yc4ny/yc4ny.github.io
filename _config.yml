@@ -53,6 +53,21 @@ content:
         description: | # this will include new lines to allow paragraphs
           Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
+  - title: Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: Visual Computing Lab
+        # link_text: boringcompany.com
+        sub_title: Graduate Researcher
+        caption: November 2021 - Present
+        quote: >
+          The Visual Computing Laboratory aims to enable machines and robots to have human-like visual intelligence, conducting research at the intersection of computer vision, machine learning, artificial intelligence, and graphics.
+        description: | # this will include new lines to allow paragraphs
+            TA for 3D Computer Vision (Spring 2022)
+
+            Research Area: 3D Reconstruction and Human Pose Estimation
+            
   - title: Papers # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -106,20 +121,6 @@ content:
         description: | # this will include new lines to allow paragraphs
          Panorama Generator is an open-source project aimed at stitching together multiple images to create seamless, high-resolution panoramas. By employing advanced image processing and computer vision techniques, the project can combine a series of overlapping images taken from different viewpoints to produce a single, wide-angle panoramic image.
       
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: Visual Computing Lab
-        # link_text: boringcompany.com
-        sub_title: Graduate Researcher
-        caption: November 2021 - Present
-        quote: >
-          The Visual Computing Laboratory aims to enable machines and robots to have human-like visual intelligence, conducting research at the intersection of computer vision, machine learning, artificial intelligence, and graphics.
-        description: | # this will include new lines to allow paragraphs
-            TA for 3D Computer Vision (Spring 2022)
-
-            Research Area: 3D Reconstruction and Human Pose Estimation
 
 
 # Footer
