@@ -36,7 +36,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: Stereo Reconstruction <br><br><img src="images/stereo.png" width=700 height=200 alt="stereo">
+        title: Stereo Reconstruction <br><br><img src="images/stereo.png" width=500 height=250 alt="stereo">
         # link: github.com/sproogen
         # link_text: Project Website
         additional_links:
