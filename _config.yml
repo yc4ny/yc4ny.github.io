@@ -99,7 +99,7 @@ content:
           Stereo Reconstruction is an open-source project that focuses on creating a 3D reconstruction from stereo images. By leveraging the power of computer vision and deep learning techniques, the project aims to accurately estimate depth information from a pair of images captured by two cameras with a known relative position.
       
       - layout: top-middle
-        title: SMPL Parameter Optimizer <br><br><img src="images/smpl.jpg" width=150 height=300 alt="smpl">
+        title: SMPL Parameter Optimizer <br><br><img src="images/smpl.png" width=300 height=300 alt="smpl">
         # link: github.com/sproogen
         # link_text: Project Website
         additional_links:
