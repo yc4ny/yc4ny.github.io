@@ -32,6 +32,40 @@ about_content: | # this will include new lines to allow paragraphs
   Ultimately, I dream to build an AI system that can behave like humans in new environments and can interact with humans using a broad channel of nonverbal signals.
 
 content:
+  - title: Education # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: Seoul National University
+        caption: Class of 2024
+        sub_title: M.S Computer Science and Engineering
+        description: | # this will include new lines to allow paragraphs
+          Affiliation: Visual Computing Lab 
+
+          Advisor: Hanbyul Joo
+
+          Coursework: 3D Computer Vision, Advanced Graphics, Advanced Data Mining, Mobile and Ubiquitous Computing
+
+      - layout: left
+        title: University of Virginia
+        caption: Class of 2021
+        sub_title: B.A Computer Science
+        description: | # this will include new lines to allow paragraphs
+          Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
+
+  - title: Papers # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: 
+        # link: boringcompany.com
+        # # link_text: boringcompany.com
+        # sub_title: Senior Network System Administrator
+        # caption: November 2017 - Present
+        # quote: >
+        #   Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
+        # description: | # this will include new lines to allow paragraphs
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -71,20 +105,7 @@ content:
           Panorama image generator using multiple images with a single camera.
         description: | # this will include new lines to allow paragraphs
          Panorama Generator is an open-source project aimed at stitching together multiple images to create seamless, high-resolution panoramas. By employing advanced image processing and computer vision techniques, the project can combine a series of overlapping images taken from different viewpoints to produce a single, wide-angle panoramic image.
-        
-  - title: Papers # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: 
-        # link: boringcompany.com
-        # # link_text: boringcompany.com
-        # sub_title: Senior Network System Administrator
-        # caption: November 2017 - Present
-        # quote: >
-        #   Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-        # description: | # this will include new lines to allow paragraphs
-
+      
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -100,30 +121,6 @@ content:
 
             Research Area: 3D Reconstruction and Human Pose Estimation
 
-  - title: Education # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: Seoul National University
-        caption: Class of 2024
-        sub_title: M.S Computer Science and Engineering
-        quote: >
-          As South Korea's flagship university, SNU is dedicated to fostering intellectual curiosity, academic excellence, and global citizenship, ensuring its continued prominence in Asia and around the world.
-        description: | # this will include new lines to allow paragraphs
-          Affiliation: Visual Computing Lab 
-
-          Advisor: Hanbyul Joo
-
-          Coursework: 3D Computer Vision, Advanced Graphics, Advanced Data Mining, Mobile and Ubiquitous Computing
-
-      - layout: left
-        title: University of Virginia
-        caption: Class of 2021
-        sub_title: B.A Computer Science
-        quote: >
-          In 1819, Thomas Jefferson founded the University of Virginia and inaugurated a bold experiment – a public university designed to advance human knowledge, educate leaders and cultivate an informed citizenry.
-        description: | # this will include new lines to allow paragraphs
-          Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
 # Footer
 footer_show_references: true
