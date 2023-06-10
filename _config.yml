@@ -42,7 +42,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           Affiliation: Visual Computing Lab 
 
-          Advisor: Hanbyul Joo
+          Advisor: <a href="https://jhugestar.github.io/">Hanbyul Joo</a>
 
           Major Coursework: 3D Computer Vision, Advanced Graphics, Advanced Data Mining, Mobile and Ubiquitous Computing
 
