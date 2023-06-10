@@ -49,8 +49,12 @@ content:
       - layout: left
         title: University of Virginia
         caption: Class of 2021
-        sub_title: B.A Computer Science (3.93/4.00)
+        sub_title: B.A Computer Science
         description: | # this will include new lines to allow paragraphs
+          UGRAD GPA: 3.93/4.00
+
+          Thesis Advisor: <a href="https://engineering.virginia.edu/faculty/raymond-pettit">Raymond Pettit</a>
+
           Major Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
   - title: Experience # Title for the section
