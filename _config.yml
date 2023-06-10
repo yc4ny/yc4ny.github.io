@@ -57,7 +57,7 @@ content:
 
           Major Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
-  - title: Experience # Title for the section
+  - title: Research Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
