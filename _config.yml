@@ -49,7 +49,7 @@ content:
       - layout: left
         title: University of Virginia
         caption: Class of 2021
-        sub_title: B.A Computer Science
+        sub_title: B.A Computer Science (3.93/4.00)
         description: | # this will include new lines to allow paragraphs
           Major Coursework: Algorithms, Computer Architecture, PL for Web applications, HCI, Data Structures, Discrete Mathematics, Software Testing
 
