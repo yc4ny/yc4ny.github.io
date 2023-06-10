@@ -37,7 +37,7 @@ content:
     content:
       - layout: left
         title: Seoul National University
-        caption: Class of 2024
+        caption: 2022-2024
         sub_title: M.S Computer Science
         description: | # this will include new lines to allow paragraphs
           Affiliation: Visual Computing Lab 
@@ -48,7 +48,7 @@ content:
 
       - layout: left
         title: University of Virginia
-        caption: Class of 2021
+        caption: 2017-2021
         sub_title: B.A Computer Science
         description: | # this will include new lines to allow paragraphs
           UGRAD GPA: 3.93/4.00
