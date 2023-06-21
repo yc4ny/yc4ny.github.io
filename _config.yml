@@ -51,7 +51,7 @@ content:
         caption: 2017-2021
         sub_title: B.A Computer Science
         description: | # this will include new lines to allow paragraphs
-          UGRAD GPA: 3.93/4.00
+          <b>GPA: 3.93/4.00</b>
 
           Thesis Advisor: <a href="https://engineering.virginia.edu/faculty/raymond-pettit">Raymond Pettit</a>
 
