@@ -1,0 +1,28 @@
+barrio:
+  img: teasers/barrio-teaser.jpeg
+
+lioness:
+  img: teasers/lioness.png
+
+vimo:
+  img: teasers/vimo-teaser-02.png
+
+connectomics_star:
+  img: teasers/connectomics_star.png
+
+killing_surfaces:
+  img: teasers/killingsurfaces.jpeg
+
+cs171-gpt:
+  img: teasers/cs171-gpt.png
+
+CAVE:
+  img: teasers/CAVE.png
+
+hackathon:
+  img: teasers/hackathon.png
+
+rapid-prototyping:
+  img: teasers/rapid-prototyping.png
+
+
