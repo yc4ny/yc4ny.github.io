@@ -1,43 +1,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html><head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESLYB8M479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ESLYB8M479');
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
   <style type="text/css">
     a {
-    color: #07889b; /*#1772d0;*/
+    color: #07889b;
     text-decoration:none;
     }
     a:focus, a:hover {
-    color: #e37222; /*#f7b733;*/ /*f09228;*/
+    color: #e37222;
     text-decoration:none;
     }
     body,td,th,tr,p {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
-    font-size: 15px; /*14*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
     }
     a {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
     strong {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
-    font-size: 15px; /*14*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
     }
     heading {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 22px;
-    color: #e37222; /*#fc4a1a;*/
+    color: #e37222;
     }
     heading2 {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 18px;
     }
     papertitle {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
-    font-size: 15px; /*14*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
     font-weight: 700;
     }
     name {
-    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 42px;
     }
     li:not(:last-child) {
@@ -69,26 +79,6 @@
   </style>
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <title>Yonwoo Choi</title>
-
-  <link href="./_files/css" rel="stylesheet" type="text/css">
-  <style id="dark-reader-style" type="text/css">@media screen {
-
-/* Text contrast */
-html {
-  text-shadow: 0 0 0 !important;
-}
-
-/* Full screen */
-*:-webkit-full-screen, *:-webkit-full-screen * {
-  -webkit-filter: none !important;
-}
-
-/* Page background */
-html {
-  background: rgb(255,255,255) !important;
-}
-
-}</style>
 
 <script type="text/javascript">
    function visibility_on(id) {
@@ -126,10 +116,30 @@ html {
        else
            e.style.display = 'none';
    }
+
+   // Custom event tracking for important interactions
+   function trackCustomEvent(eventName, eventData) {
+     if (typeof gtag !== 'undefined') {
+       gtag('event', eventName, eventData);
+     }
+   }
+
+   // Track PDF downloads
+   document.addEventListener('DOMContentLoaded', function() {
+     document.addEventListener('click', function(e) {
+       if (e.target.tagName === 'A' && e.target.href.endsWith('.pdf')) {
+         trackCustomEvent('pdf_download', {
+           event_category: 'engagement',
+           event_label: e.target.href.split('/').pop()
+         });
+       }
+     });
+   });
 </script>
 
 </head>
-</div>
+
+<body>
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tbody><tr>
     <td>
@@ -148,8 +158,6 @@ html {
         <p>
         Previously, I completed my M.S at <a href="https://www.snu.ac.kr/">Seoul National University</a> and my B.A. at the <a href="https://www.virginia.edu/">University of Virginia</a> both in computer science. During my M.S, I was fortunate to be part of the Visual Computing Lab under the supervision of <a href="https://jhugestar.github.io/">Hanbyul Joo</a>.
         </p>
-        </p>
-
 
         <p align="center">
 <a href="data/Yonwoo_CV.pdf">CV</a> &nbsp;/&nbsp;
@@ -244,10 +252,7 @@ html {
     </p>
     </tr>
     </td>
-
-
-    </td>
     </tr>
   </tbody></table>
-  <br>
-  <br>
+</body>
+</html>
