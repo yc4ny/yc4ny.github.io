@@ -1,0 +1,135 @@
+:root {
+  --main-font: "Cardo", Georgia, serif;     
+
+}
+
+/* Base Styles */
+a {
+  color: #07889b;
+  text-decoration: none;
+  font-family: var(--main-font);
+}
+
+a:focus, 
+a:hover {
+  color: #e37222;
+  text-decoration: none;
+}
+
+body, td, th, tr, p {
+  font-family: var(--main-font);
+  font-size: 16px;
+}
+
+strong {
+  font-family: var(--main-font);
+  font-size: 15px;
+}
+
+/* Custom Elements */
+heading {
+  font-family: var(--main-font);
+  font-size: 25px;
+  color: #f5a002;
+}
+
+heading2 {
+  font-family: var(--main-font);
+  font-size: 18px;
+}
+
+name {
+  font-family: var(--main-font);
+  font-size: 42px;
+}
+
+/* Paper and Content Styles */
+.papertitle {
+  font-family: var(--main-font);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/* News Section Styles */
+.news-date {
+  font-weight: bold;
+  color: #3100f5;
+  font-size: 19px;
+}
+
+.news-content {
+  font-size: 18px;
+}
+
+/* Work Experience Styles */
+.work-item {
+  margin-bottom: 20px;
+}
+
+.work-company {
+  font-family: var(--main-font);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.work-title {
+  color: #000000;
+  font-size: 15px;
+}
+
+
+.work-duration {
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Opensouce Styles */
+
+.opensource-title {
+  font-family: var(--main-font);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.opensource-affiliation {
+  color: #000000;
+  font-size: 15px;
+}
+
+
+.opensource-duration {
+  font-style: italic;
+  font-size: 16px;
+}
+
+
+/* Layout and Animation Styles */
+li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+/* Utility Styles */
+span.highlight {
+  background-color: #ffffd0;
+}
