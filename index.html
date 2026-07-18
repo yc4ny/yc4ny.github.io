@@ -1,7 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yonwoo Choi | GenGenAI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
-  <!------------------------------ Google Analytics Tracking----------------------------->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESLYB8M479"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,435 +16,734 @@
     gtag('js', new Date());
     gtag('config', 'G-ESLYB8M479');
   </script>
-
-<!------------------------------ Link .css, .js----------------------------->
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-
-
-  <!-- GOOGLE FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Cardo:ital,wght@0,400;0,700;1,400&family=Neuton:ital,wght@0,300;0,400;0,700;1,400&family=Gentium+Plus:ital,wght@0,400;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,300;1,7..72,400&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Domine:wght@400;500;600&family=Slabo+27px&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Crete+Round:ital@0;1&family=Quando&family=Radley:ital@0;1&family=Inknut+Antiqua:wght@300;400;500&family=Bentham&family=Lustria&family=Trocchi&family=Arapey:ital@0;1&family=Adamina&family=Kameron:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  
-
-
-<!------------------------------ Intro----------------------------->
   <script src="script.js"></script>
-  <title>Yonwoo Choi</title>
 
+  <style>
+    /* ── Reset & base ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-padding-top: 52px; }
+
+    body {
+      background: #fff;
+      color: #000;
+    }
+
+    /* ── Sticky nav ───────────────────────────────── */
+    #topnav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e0e0e0;
+      backdrop-filter: blur(6px);
+    }
+    #topnav ul {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    #topnav ul li a {
+      display: block;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #444;
+      letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+    #topnav ul li a:hover { color: #000; }
+
+    /* ── Page wrapper ─────────────────────────────── */
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 36px 40px 80px 40px;
+    }
+
+    /* ── Profile header ───────────────────────────── */
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .profile-info { flex: 1; }
+    .profile-info .Name {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+      display: block;
+      white-space: nowrap;
+    }
+    .profile-info p {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    .profile-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .profile-links a {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #333;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .profile-links a:hover { border-color: #555; color: #000; }
+
+    .profile-logo { margin-top: 14px; }
+    .profile-logo img { max-height: 72px; }
+
+    .profile-photos {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+    .profile-photos img {
+      max-height: 220px;
+      border-radius: 4px;
+      display: block;
+    }
+
+    /* ── Bio ──────────────────────────────────────── */
+    .bio {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+
+    /* ── Internship notice ────────────────────────── */
+    .notice {
+      background: #f7f9ff;
+      border-left: 3px solid #4477cc;
+      padding: 10px 16px;
+      margin-bottom: 28px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      border-radius: 0 4px 4px 0;
+    }
+    .notice a { color: #2255bb; }
+
+    /* ── Section headings ─────────────────────────── */
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+      padding-bottom: 0.2em;
+      border-bottom: 1.2px solid #aaa;
+    }
+
+    /* ── Research videos ──────────────────────────── */
+    .research-videos {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .research-video-item { text-align: center; }
+    .research-video-item iframe { display: block; border-radius: 4px; }
+    .research-video-item a {
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: underline;
+      color: #000;
+      display: block;
+      margin-top: 6px;
+    }
+
+    /* ── News ─────────────────────────────────────── */
+    .news-list {
+      list-style: none;
+      padding: 0;
+    }
+    .news-list li {
+      display: flex;
+      gap: 16px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: 0.4em;
+    }
+    .news-list li:last-child { margin-bottom: 0; }
+    .news-date {
+      min-width: 80px;
+      font-weight: 600;
+      color: #555;
+      font-size: 16px;
+      padding-top: 1px;
+      white-space: nowrap;
+    }
+    .news-list a { color: #000; font-weight: 300; text-decoration: underline; }
+
+    /* ── Students grid ────────────────────────────── */
+    .students-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px 0;
+    }
+    .students-grid div {
+      padding: 4px 0;
+    }
+    .students-grid a {
+      font-size: 16px;
+      font-weight: 300;
+      color: #000;
+      display: inline;
+    }
+    .student-role {
+      font-size: 16px;
+      color: #555;
+      font-weight: 300;
+      margin-left: 4px;
+      display: inline;
+    }
+    .student-role::before { content: "("; }
+    .student-role::after  { content: ")"; }
+
+    /* ── Dataset / Systems table ──────────────────── */
+    .resource-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .resource-table tr { vertical-align: top; border-bottom: 1px solid #f0f0f0; }
+    .resource-table tr:last-child { border-bottom: none; }
+    .resource-table td { padding: 6px 12px 6px 0; }
+    .resource-table td:first-child { width: 220px; }
+    .resource-table img {
+      max-width: 200px;
+      border-radius: 4px;
+      display: block;
+    }
+    .resource-table p {
+      font-size: 16px;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    /* ── Publications ─────────────────────────────── */
+    .pub-note {
+      font-size: 16px;
+      color: #666;
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+    .pub-list { list-style: none; padding: 0; }
+    .pub-entry {
+      display: flex;
+      gap: 20px;
+      padding: 2px 0;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+    .pub-entry:last-child { border-bottom: none; }
+    .pub-thumb {
+      width: 200px;
+      flex-shrink: 0;
+    }
+    .pub-thumb img,
+    .pub-thumb video {
+      width: 100%;
+      max-height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      background: #f5f5f5;
+    }
+    .pub-thumb img.logo {
+      object-fit: contain;
+      background: #fff;
+    }
+    .pub-body { flex: 1; }
+    .pub-title {
+      font-size: 16px;
+      font-weight: 550;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+    .pub-title a { color: #000; font-weight: 550; text-decoration: none; }
+    .pub-title a:hover { text-decoration: underline; }
+    .pub-authors {
+      font-size: 16px;
+      font-weight: 300;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 3px;
+    }
+    .pub-venue {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+    .pub-desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 3px;
+    }
+    .pub-award {
+      font-size: 16px;
+      font-weight: 550;
+      color: #1a55cc;
+      margin-bottom: 5px;
+    }
+    .pub-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; align-items: center; }
+    .pub-links a {
+      font-size: 14px;
+      font-weight: 300;
+      padding: 1px 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      text-decoration: none;
+      color: #333;
+      transition: border-color 0.15s;
+    }
+    .pub-links a:hover { border-color: #666; color: #000; }
+    .pub-links a.star-badge { border: none; padding: 0; }
+
+    .pub-press {
+      margin-top: 7px;
+      font-size: 14px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pub-press img { opacity: 0.75; vertical-align: middle; }
+    .pub-press a:hover img { opacity: 1; }
+
+    .venue-oral { color: #1a55cc; font-weight: 600; }
+    .venue-highlight { color: #1a55cc; font-weight: 600; }
+    .acceptance { color: #888; font-size: 14px; font-weight: 300; }
+
+    /* ── Press Coverage ──────────────────────────── */
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .press-item {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .press-item img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .press-item a { color: #000; }
+    .press-list {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      padding-left: 18px;
+    }
+    .press-list li { margin-bottom: 0.7em; }
+    .press-list a { color: #000; text-decoration: underline; font-weight: 300; }
+
+    /* ── Mobile ───────────────────────────────────── */
+    @media (max-width: 680px) {
+      #topnav ul {
+        padding: 0 8px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+      }
+      #topnav ul li a {
+        padding: 10px 10px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .page {
+        padding: 20px 16px 60px 16px;
+      }
+
+      .profile {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .profile-photos {
+        margin-left: 0;
+        justify-content: center;
+      }
+      .profile-photos img {
+        max-height: 160px;
+      }
+      .profile-info .Name {
+        font-size: 28px;
+        white-space: normal;
+      }
+
+      .research-videos {
+        flex-direction: column;
+      }
+      .research-video-item iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+
+      .students-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .resource-table td:first-child { width: 120px; }
+      .resource-table img { max-width: 120px; }
+
+      .pub-entry {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .pub-thumb {
+        width: 100%;
+      }
+      .pub-thumb img,
+      .pub-thumb video {
+        max-height: 200px;
+      }
+
+      .press-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+
+    /* ── Footer ───────────────────────────────────── */
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      font-weight: 300;
+    }
+  </style>
 </head>
+
 <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tbody><tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tbody><tr>
-        <td width="67%" valign="middle">
-        <p align="center">
-        <name>Yonwoo Choi</name><br>
-        yhugestar at gmail dot com
-        </p>
-        <p>I am currently fulfilling my alternative military service as an Algorithm Engineer at <a href="https://www.gengen.ai/">GenGenAI</a>, where I focus on generating realistic synthetic data, working closely with  <a href="https://suhwan-cho.github.io//">Suhwan Cho</a>. 
-        <!-- <p>I am currently fulfilling my alternative military service as an Research Engineer at <a href="https://www.secern.ai/">SECERN AI</a>, where I focus on generating synthetic data with 3D. -->
-        </p>
-        <p>
-        <i>My research focuses on the intersection of 3D computer vision and generative models, developing methods to create realistic synthetic data for downstream tasks.</i>
-        </p>
-        <p>
-        I completed my M.S at <a href="https://cse.snu.ac.kr/en/about/overview">Seoul National University</a> 
-        and my B.A. at the <a href="https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs/ba-computer-science">University of Virginia</a>
-        both in computer science. During my M.S, I was fortunate to be part of the Visual Computing Lab under the supervision of 
-        <a href="https://jhugestar.github.io/">Hanbyul Joo</a>. 
-        Previously, I have worked at <a href="https://secern.ai/">SECERN AI</a>, working on Animatable 3D Human Avatars.
-        </p>
 
-        <p align="center">
-<a href="data/Yonwoo_CV.pdf">CV</a> &nbsp;/&nbsp;
-<!-- <a href="">CV</a> &nbsp;/&nbsp; -->
-<a href="https://scholar.google.com/citations?user=yJDdtlgAAAAJ&hl=ko">Google Scholar</a> &nbsp;/&nbsp;
-<a href="https://openreview.net/profile?id=~Yonwoo_Choi1">OpenReview</a> &nbsp;/&nbsp;
-<a href="https://github.com/yc4ny">GitHub</a> &nbsp;/&nbsp;
-<a href="https://www.linkedin.com/in/yonwoo-choi/">Linkedin</a>
-        </p>
-        </td>
-        <td width="33%">
-        <img width="280" src="images/Yonwoo.png">
-        </td>
-      </tr>
-  </tbody></table>
+<!-- ── Navigation ─────────────────────────────────── -->
+<nav id="topnav">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#opensource">Open Source</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+  </ul>
+</nav>
 
-<!------------------------------ News ----------------------------->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr>
-      <td>
-        <heading>News</heading>
-        <ul>
-          <li>
-            <span class="news-date">2025.09</span>
-            <span class="news-content">I started working as an Algorithm Engineer at <a href="https://www.gengen.ai/">GenGenAI</a>.</span>
-          </li>
-          <li>
-            <span class="news-date">2025.03</span>
-            <span class="news-content"><a href="https://yc4ny.github.io/SVAD/">SVAD</a> has been accepted to CVPR 2025 Workshop <a href="https://syntagen25.github.io/">SyntaGen</a>.</span>
-          </li>
-          <li>
-            <span class="news-date">2024.03</span>
-            <span class="news-content">I started working as an Research Engineer at <a href="https://www.secern.ai/">SECERN AI</a>.</span>
-          </li>
-          <li>
-            <span class="news-date">2024.02</span>
-            <span class="news-content">I've <a href="data/snu_diploma.pdf">graduated</a> from SNU with an M.S.</span>
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+<div class="page">
 
-<!------------------------------ Papers ----------------------------->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr>
-      <td>
-        <heading>Papers</heading>
-      </td>
-    </tr>
-  </table>
+  <!-- ── Profile ──────────────────────────────────── -->
+  <a id="home"></a>
+  <div class="profile">
+    <div class="profile-info">
+      <span class="Name">Yonwoo Choi</span>
+      <p>
+        Algorithm Engineer<br>
+        <a href="https://www.gengen.ai/">GenGenAI</a><br>
+        Email: yhugestar-at-gmail-dot-com
+      </p>
+      <div class="profile-links">
+        <a href="https://scholar.google.com/citations?user=yJDdtlgAAAAJ&hl=ko">Google Scholar</a>
+        <a href="data/Yonwoo_CV.pdf">CV</a>
+        <a href="https://openreview.net/profile?id=~Yonwoo_Choi1">OpenReview</a>
+        <a href="https://github.com/yc4ny">GitHub</a>
+        <a href="https://www.linkedin.com/in/yonwoo-choi/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="profile-photos">
+      <img src="images/Yonwoo.png" alt="Yonwoo Choi">
+    </div>
+  </div>
 
-  <table width="100%" align="center" border="0" cellpadding="20">
-  <tbody>
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src='images/svad.png' width="100%">
+  <hr style="border:none; border-top:1px solid #ddd; margin-bottom:24px;">
+
+  <!-- ── Bio ──────────────────────────────────────── -->
+  <p class="bio">
+    I am currently fulfilling my alternative military service as an Algorithm Engineer at <a href="https://www.gengen.ai/">GenGenAI</a>, where I focus on generating realistic synthetic data, working closely with <a href="https://suhwan-cho.github.io/">Suhwan Cho</a>.
+  </p>
+  <p class="bio">
+    <i>My research focuses on the intersection of 3D computer vision and generative models, developing methods to create realistic synthetic data for downstream tasks.</i>
+  </p>
+  <p class="bio">
+    I completed my M.S. at <a href="https://cse.snu.ac.kr/en/about/overview">Seoul National University</a> and my B.A. at the <a href="https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs/ba-computer-science">University of Virginia</a>, both in computer science. During my M.S., I was fortunate to be part of the Visual Computing Lab under the supervision of <a href="https://jhugestar.github.io/">Hanbyul Joo</a>. Previously, I have worked at <a href="https://secern.ai/">SECERN AI</a>, working on Animatable 3D Human Avatars.
+  </p>
+
+  <!-- ── News ─────────────────────────────────────── -->
+  <a id="news"></a>
+  <div class="section-title">News</div>
+  <ul class="news-list">
+    <li><span class="news-date">Sep 2025</span><span>I started working as an Algorithm Engineer at <a href="https://www.gengen.ai/">GenGenAI</a>.</span></li>
+    <li><span class="news-date">Mar 2025</span><span><a href="https://yc4ny.github.io/SVAD/">SVAD</a> has been accepted to CVPR 2025 Workshop <a href="https://syntagen25.github.io/">SyntaGen</a>.</span></li>
+    <li><span class="news-date">Mar 2024</span><span>I started working as a Research Engineer at <a href="https://www.secern.ai/">SECERN AI</a>.</span></li>
+    <li><span class="news-date">Feb 2024</span><span>I've <a href="data/snu_diploma.pdf">graduated</a> from SNU with an M.S.</span></li>
+  </ul>
+
+  <!-- ── Publications ──────────────────────────────── -->
+  <a id="publications"></a>
+  <div class="section-title">Publications</div>
+
+  <ul class="pub-list">
+
+    <!-- SVAD -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://yc4ny.github.io/SVAD/"><img src="images/svad.png" alt="SVAD"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://yc4ny.github.io/SVAD/">SVAD: From Single Image to 3D Avatar via Synthetic Data Generation with Video Diffusion and Data Augmentation</a></div>
+        <div class="pub-authors"><strong>Yonwoo Choi</strong></div>
+        <div class="pub-venue"><em>CVPR 2025 Workshop, SyntaGen &mdash; Harnessing Generative Models for Synthetic Visual Datasets, 2025</em></div>
+        <div class="pub-desc">3D Animatable Avatar Generation from a Single Image</div>
+        <div class="pub-links">
+          <a href="https://openaccess.thecvf.com/content/CVPR2025W/SyntaGen/html/Choi_SVAD_From_Single_Image_to_3D_Avatar_via_Synthetic_Data_CVPRW_2025_paper.html">Paper</a>
+          <a href="https://yc4ny.github.io/SVAD/">Project Page</a>
+          <a href="https://github.com/yc4ny/SVAD">Code</a>
+          <a href="https://arxiv.org/abs/2505.05475">arXiv</a>
+          <a href="https://openreview.net/forum?id=S4SrbuOEcz">Review</a>
         </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://yc4ny.github.io/SVAD/">
-            <span class="papertitle">SVAD: From Single Image to 3D Avatar via Synthetic Data Generation with Video Diffusion and Data Augmentation</span>
-        </a>
-        <br>
-        <strong>Yonwoo Choi</strong>
-        <br>
-        <em>CVPR 2025 Workshop <br> SyntaGen-Harnessing Generative Models for Synthetic Visual Datasets</em>, 2025
-        <br>
-        <a href="https://yc4ny.github.io/SVAD/">project page</a>
-        /
-        <a href="https://openaccess.thecvf.com/content/CVPR2025W/SyntaGen/html/Choi_SVAD_From_Single_Image_to_3D_Avatar_via_Synthetic_Data_CVPRW_2025_paper.html">paper</a>
-        /
-        <a href="https://github.com/yc4ny/SVAD">code</a>
-        <!-- <img src="https://img.shields.io/github/stars/yc4ny/SVAD?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> -->
-        /
-        <a href="https://arxiv.org/abs/2505.05475">arXiv</a>
-        /
-        <a href="https://openreview.net/forum?id=S4SrbuOEcz">review</a>
-        <p></p>
-        <p>3D Animatable Avatar Generation from a Single Image</p>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src='images/wristmounted.png' width="100%">
+      </div>
+    </li>
+
+    <!-- MS Thesis -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="data/MSThesis.pdf"><img src="images/wristmounted.png" alt="Wrist Mounted Camera System"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="data/MSThesis.pdf">A Wrist Mounted Camera System for Hand Pose Estimation from Single RGB Images</a></div>
+        <div class="pub-authors"><strong>Yonwoo Choi</strong>, <a href="https://jhugestar.github.io/">Hanbyul Joo</a></div>
+        <div class="pub-venue"><em>Master's Thesis, Computer Science and Engineering, Seoul National University, 2024</em></div>
+        <div class="pub-desc">A System for Collecting Pseudo Ground Truth 3D Hand Poses to Improve Pose Estimation Models</div>
+        <div class="pub-links">
+          <a href="https://dcollection.snu.ac.kr/srch/srchDetail/000000182233?localeParam=en">Paper</a>
+          <a href="data/MSThesis.pdf">PDF</a>
         </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="data/MSThesis.pdf">
-            <span class="papertitle">A Wrist Mounted Camera System for Hand Pose Estimation from Single RGB Images</span>
-        </a>
-        <br>
-        <strong>Yonwoo Choi</strong>,
-        Hanbyul Joo
-        <br>
-        <em>Masters Thesis <br> Computer Science and Engineering, Seoul National University</em>, 2024
-        <br>
-        <a href="https://dcollection.snu.ac.kr/srch/srchDetail/000000182233?localeParam=en">paper</a>
-        <p></p>
-        <p>A System for Collecting Pseudo Ground Truth 3D Hand Poses to Improve Pose Estimation Models</p>
-    </td>
-  </tr>
-  </tbody>
-</table>
+      </div>
+    </li>
 
+  </ul><!-- /pub-list -->
 
+  <!-- ── Open Source ───────────────────────────────── -->
+  <a id="opensource"></a>
+  <div class="section-title">Open Source</div>
 
-  <!------------------------------ Opensource----------------------------->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top: 30px;">
-    <tr>
-      <td>
-        <heading>Opensource</heading>
-      </td>
-    </tr>
-  </table>
+  <ul class="pub-list">
 
-  <table width="100%" align="center" border="0" cellpadding="20">
-    <tbody>
+    <!-- SVAD Code -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://github.com/yc4ny/SVAD"><img src="images/svad_code.png" alt="Single Image to 3D Human Avatar"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://github.com/yc4ny/SVAD">Single Image to 3D Human Avatar</a></div>
+        <div class="pub-venue"><em>SECERN AI, May 2025</em></div>
+        <div class="pub-desc">
+          - Official Implementation of the paper <a href="https://openaccess.thecvf.com/content/CVPR2025W/SyntaGen/html/Choi_SVAD_From_Single_Image_to_3D_Avatar_via_Synthetic_Data_CVPRW_2025_paper.html">SVAD</a><br>
+          - Synthetic Data Generation Pipeline for 3DGS Avatar Training
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/yc4ny/SVAD">Code</a>
+          <a class="star-badge" href="https://github.com/yc4ny/SVAD"><img src="https://img.shields.io/github/stars/yc4ny/SVAD?style=social" alt="GitHub stars"></a>
+        </div>
+      </div>
+    </li>
 
+    <!-- Facebuilder -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://github.com/yc4ny/facebuilder"><img src="images/facebuilder.png" alt="Facebuilder"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://github.com/yc4ny/facebuilder">Facebuilder</a></div>
+        <div class="pub-venue"><em>SECERN AI, March 2025</em></div>
+        <div class="pub-desc">
+          - 3D Face Mesh Deformation with Pin-Based Interaction<br>
+          - Multiview Face Modeling with Real-time 3D Consistency
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/yc4ny/facebuilder">Code</a>
+          <a class="star-badge" href="https://github.com/yc4ny/facebuilder"><img src="https://img.shields.io/github/stars/yc4ny/facebuilder?style=social" alt="GitHub stars"></a>
+        </div>
+      </div>
+    </li>
 
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;">
-            <div class="one">
-              <img src='images/svad_code.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;">
-              <span class="opensource-title">Single Image to 3D Human Avatar</span>
-            </a>
-            <br>
-            <span class="opensource-affiliation">SECERN AI</span>
-            <br>
-            <span class="opensource-duration">May 2025</span>
-            <br>
-            <a href="https://github.com/yc4ny/SVAD">Code </a><img src="https://img.shields.io/github/stars/yc4ny/SVAD?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> 
-            <br>
-            - Official Implementation of the paper <a href="https://openaccess.thecvf.com/content/CVPR2025W/SyntaGen/html/Choi_SVAD_From_Single_Image_to_3D_Avatar_via_Synthetic_Data_CVPRW_2025_paper.html">SVAD</a>
-            <br>
-            - Synthetic Data Generation Pipeline for 3DGS Avatar Training
-        </td>
-      </tr>
+    <!-- X-Ray -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://github.com/yc4ny/xray-3d-detection"><img src="images/xray.png" alt="Multiview X-Ray 3D Object Detector"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://github.com/yc4ny/xray-3d-detection">Multiview X-Ray 3D Object Detector</a></div>
+        <div class="pub-venue"><em>SECERN AI, December 2024</em></div>
+        <div class="pub-desc">
+          - 9-view Fanbeam Calibration<br>
+          - X-Ray Hazardous Objection Detection<br>
+          - 3D Bounding Box Detection
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/yc4ny/xray-3d-detection">Code</a>
+          <a class="star-badge" href="https://github.com/yc4ny/xray-3d-detection"><img src="https://img.shields.io/github/stars/yc4ny/xray-3d-detection?style=social" alt="GitHub stars"></a>
+        </div>
+      </div>
+    </li>
 
+    <!-- SMPL Fitting -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://github.com/yc4ny/SMPL-Fitting"><img src="images/smpl_fitting.png" alt="SMPL Fitting"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://github.com/yc4ny/SMPL-Fitting">SMPL Fitting</a></div>
+        <div class="pub-venue"><em>SECERN AI, June 2024</em></div>
+        <div class="pub-desc">
+          - Fitting SMPL Parameters to 3D Human Joints<br>
+          - Parametric Human Shape and Pose Optimization
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/yc4ny/SMPL-Fitting">Code</a>
+          <a class="star-badge" href="https://github.com/yc4ny/SMPL-Fitting"><img src="https://img.shields.io/github/stars/yc4ny/SMPL-Fitting?style=social" alt="GitHub stars"></a>
+        </div>
+      </div>
+    </li>
 
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;">
-            <div class="one">
-              <img src='images/facebuilder.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;">
-              <span class="opensource-title">Facebuilder</span>
-            <br>
-            <span class="opensource-affiliation">SECERN AI</span>
-            <br>
-            <span class="opensource-duration">March 2025</span>
-            <br>
-            <a href="https://github.com/yc4ny/facebuilder">Code </a><img src="https://img.shields.io/github/stars/yc4ny/facebuilder?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> 
-            <br>
-            - 3D Face Mesh Deformation with Pin-Based Interaction<br>
-            - Multiview Face Modeling with Real-time 3D Consistency
-        </td>
-      </tr>
+    <!-- xR-EgoPose -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://github.com/yc4ny/xR-EgoPose"><img src="images/xregopose.png" alt="Egocentric Human Pose Estimator"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://github.com/yc4ny/xR-EgoPose">Egocentric Human Pose Estimator</a></div>
+        <div class="pub-venue"><em>Visual Computing Lab, December 2023</em></div>
+        <div class="pub-desc">
+          - Unofficial Implementation of the Paper <a href="https://arxiv.org/abs/1907.10045">xR-EgoPose</a><br>
+          - Egocentric 3D Human Pose Estimation from a Single Fisheye Camera
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/yc4ny/xR-EgoPose">Code</a>
+          <a class="star-badge" href="https://github.com/yc4ny/xR-EgoPose"><img src="https://img.shields.io/github/stars/yc4ny/xR-EgoPose?style=social" alt="GitHub stars"></a>
+        </div>
+      </div>
+    </li>
 
+    <!-- Multiview Capture -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction"><img src="images/stereo.png" alt="Multiview Human Pose Capture System"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction">Multiview Human Pose Capture System</a></div>
+        <div class="pub-venue"><em>Visual Computing Lab, April 2022</em></div>
+        <div class="pub-desc">
+          - 5 GoPro Camera Setup for 3D Human Reconstruction<br>
+          - Camera Calibration with Zhang's Method
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction">Code</a>
+          <a class="star-badge" href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction"><img src="https://img.shields.io/github/stars/yc4ny/Multi-Camera-3D-Human-Reconstruction?style=social" alt="GitHub stars"></a>
+        </div>
+      </div>
+    </li>
 
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;">
-            <div class="one">
-              <img src='images/xray.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-              <span class="opensource-title">Multiview X-Ray 3D Object Detector</span>
-            </a>
-            <br>
-            <span class="opensource-affiliation">SECERN AI</span>
-            <br>
-            <span class="opensource-duration">Dec 2024</span>
-            <br>
-            <a href="https://github.com/yc4ny/xray-3d-detection">Code </a><img src="https://img.shields.io/github/stars/yc4ny/xray-3d-detection?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> 
-            <br>
-            - 9-view Fanbeam Calibration
-            <br>
-            - X-Ray Hazardous Objection Detection 
-            <br>
-            - 3D Bounding Box Detection
-        </td>
-      </tr> 
+  </ul><!-- /pub-list -->
 
+  <!-- ── Work Experience ───────────────────────────── -->
+  <a id="experience"></a>
+  <div class="section-title">Work Experience</div>
 
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;">
-            <div class="one">
-              <img src='images/smpl_fitting.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-              <span class="opensource-title">SMPL Fitting</span>
-            </a>
-            <br>
-            <span class="opensource-affiliation">SECERN AI</span>
-            <br>
-            <span class="opensource-duration">June 2024</span>
-            <br>
-            <a href="https://github.com/yc4ny/SMPL-Fitting">Code </a><img src="https://img.shields.io/github/stars/yc4ny/SMPL-Fitting?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> 
-            <br>
-            - Fitting SMPL Parameters to 3D Human Joints
-            <br>
-            - Parametric Human Shape and Pose Optimization
-        </td>
-      </tr>
+  <ul class="pub-list">
 
+    <!-- GenGenAI -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://www.gengen.ai"><img class="logo" src="images/gengen.png" alt="GenGenAI"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://www.gengen.ai">GenGenAI</a></div>
+        <div class="pub-venue"><em>Algorithm Engineer, September 2025 &ndash; Present</em></div>
+        <div class="pub-desc">
+          - Controllable Image and Video Generation Across Domains
+        </div>
+      </div>
+    </li>
 
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;">
-            <div class="one">
-              <img src='images/xregopose.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-              <span class="opensource-title">Egocentric Human Pose Estimator</span>
-            </a>
-            <br>
-            <span class="opensource-affiliation">Visual Computing Lab</span>
-            <br>
-            <span class="opensource-duration">December 2023</span>
-            <br>
-            <a href="https://github.com/yc4ny/xR-EgoPose">Code </a><img src="https://img.shields.io/github/stars/yc4ny/xR-EgoPose?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> 
-            <br>
-            - Unofficial Implementation of the Paper <a href="https://arxiv.org/abs/1907.10045">xR-EgoPose</a>
-            <br>
-            - Egocentric 3D Human Pose Estimation from a Single Fisheye Camera
-        </td>
-      </tr>
-
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;">
-            <div class="one">
-              <img src='images/stereo.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-              <span class="opensource-title">Multiview Human Pose Capture System</span>
-            </a>
-            <br>
-            <span class="opensource-affiliation">Visual Computing Lab</span>
-            <br>
-            <span class="opensource-duration">April 2022</span>
-            <br>
-            <a href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction">Code </a><img src="https://img.shields.io/github/stars/yc4ny/Multi-Camera-3D-Human-Reconstruction?style=social" alt="GitHub stars" style="vertical-align: middle; margin-left: 5px;"> 
-            <br>
-            - 5 GoPro Camera Setup for 3D Human Reconstruction
-            <br>
-            - Camera Calibration with Zhang's Method
-        </td>
-      </tr>
-
-
-    </tbody>
-  </table>
-
-
-
-  <!------------------------------ Work Experience ----------------------------->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top: 30px;">
-    <tr>
-      <td>
-        <heading>Work Experience</heading>
-      </td>
-    </tr>
-  </table>
-
-  <table width="100%" align="center" border="0" cellpadding="20">
-    <tbody>
-
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-            <div class="one">
-              <img src='images/gengen.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-            <a href="https://www.gengen.ai">
-              <span class="work-company">GenGenAI</span>
-            </a>
-            <br>
-            <span class="work-title">Algorithm Engineer</span>
-            <br>
-            <span class="work-duration">September 2025 - Present</span>
-            <br>
-            - Controllable Image and Video Generation Across Domains
-        </td>
-      </tr>
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-            <div class="one">
-              <img src='images/secern.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-            <a href="https://www.secern.ai/">
-              <span class="work-company">SECERN AI</span>
-            </a>
-            <br>
-            <span class="work-title">Research Engineer</span>
-            <br>
-            <span class="work-duration">March 2024 - September 2025</span>
-            <br>
+    <!-- SECERN AI -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://www.secern.ai/"><img class="logo" src="images/secern.png" alt="SECERN AI"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://www.secern.ai/">SECERN AI</a></div>
+        <div class="pub-venue"><em>Research Engineer, March 2024 &ndash; September 2025</em></div>
+        <div class="pub-desc">
           - Animatable 3D Human Avatars
-        </td>
-      </tr>
+        </div>
+      </div>
+    </li>
 
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-            <div class="one">
-              <img src='images/vclab.png' width="100%">
-            </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle;padding-bottom:0px;padding-top:0px">
-            <a href="https://cse.snu.ac.kr/en/research/labs/39">
-              <span class="work-company">Visual Computing Lab</span>
-            </a>
-            <br>
-            <span class="work-title">Graduate Researcher</span>
-            <br>
-            <span class="work-duration">November 2021 - Feburary 2024</span>
-            <br>
-            - 3D Egocentric Hand, Body Pose Estimation<br>
-            - Multiview Capture System for Human Pose Estimation
-        </td>
-      </tr>
+    <!-- Visual Computing Lab -->
+    <li class="pub-entry">
+      <div class="pub-thumb">
+        <a href="https://cse.snu.ac.kr/en/research/labs/39"><img class="logo" src="images/vclab.png" alt="Visual Computing Lab"></a>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title"><a href="https://cse.snu.ac.kr/en/research/labs/39">Visual Computing Lab</a></div>
+        <div class="pub-venue"><em>Graduate Researcher, November 2021 &ndash; February 2024</em></div>
+        <div class="pub-desc">
+          - 3D Egocentric Hand, Body Pose Estimation<br>
+          - Multiview Capture System for Human Pose Estimation
+        </div>
+      </div>
+    </li>
 
-    </tbody>
-  </table>
+  </ul><!-- /pub-list -->
 
+  <!-- ── Teaching ──────────────────────────────────── -->
+  <a id="teaching"></a>
+  <div class="section-title">Teaching</div>
+  <ul class="news-list">
+    <li><span class="news-date">Fall 2023</span><span><strong>Teaching Assistant</strong>, Seoul National University &mdash; 4190.408 001 Artificial Intelligence (Instructor: Hanbyul Joo)</span></li>
+    <li><span class="news-date">Spring 2022</span><span><strong>Teaching Assistant</strong>, Seoul National University &mdash; 4190.773 002 3D Computer Vision (Instructor: Hanbyul Joo)</span></li>
+  </ul>
 
+</div><!-- /page -->
 
-
-<!------------------------------ Teaching ----------------------------->
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top: 30px;">
-  <tr>
-    <td>
-      <heading>Teaching</heading>
-    </td>
-  </tr>
-</table>
-
-<table width="100%" align="center" border="0" cellpadding="20">
-  <tbody>
-    <tr>
-      <td style="padding:20px;vertical-align:middle;">
-        <table width="100%" style="border-collapse: collapse;">
-          <tr>
-            <td style="padding: 5px 0;"><strong>Teaching Assistant</strong>, Seoul National University</td>
-            <td style="text-align: right; padding: 5px 0;"><em>Fall 2023</em></td>
-          </tr>
-          <tr>
-            <td style="padding-left: 20px; padding: 2px 0 2px 20px;">4190.408 001 - Artificial Intelligence (Instructor: Hanbyul Joo)</td>
-            <td></td>
-          </tr>
-        </table>
-        
-        <table width="100%" style="border-collapse: collapse; margin-top: 15px;">
-          <tr>
-            <td style="padding: 5px 0;"><strong>Teaching Assistant</strong>, Seoul National University</td>
-            <td style="text-align: right; padding: 5px 0;"><em>Spring 2022</em></td>
-          </tr>
-          <tr>
-            <td style="padding-left: 20px; padding: 2px 0 2px 20px;">4190.773 002 - 3D Computer Vision (Instructor: Hanbyul Joo)</td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-
+<footer>
+  &copy; Yonwoo Choi &nbsp;&middot;&nbsp; GenGenAI
+</footer>
 
 </body>
 </html>
