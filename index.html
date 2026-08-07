@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESLYB8M479"></script>
   <script>
@@ -17,18 +16,14 @@
     gtag('config', 'G-ESLYB8M479');
   </script>
   <script src="script.js"></script>
-
   <style>
     /* ── Reset & base ─────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-padding-top: 52px; }
-
     body {
       background: #fff;
       color: #000;
     }
-
     /* ── Sticky nav ───────────────────────────────── */
     #topnav {
       position: sticky;
@@ -57,14 +52,12 @@
       transition: color 0.15s;
     }
     #topnav ul li a:hover { color: #000; }
-
     /* ── Page wrapper ─────────────────────────────── */
     .page {
       max-width: 1000px;
       margin: 0 auto;
       padding: 36px 40px 80px 40px;
     }
-
     /* ── Profile header ───────────────────────────── */
     .profile {
       display: flex;
@@ -105,10 +98,8 @@
       transition: border-color 0.15s, color 0.15s;
     }
     .profile-links a:hover { border-color: #555; color: #000; }
-
     .profile-logo { margin-top: 14px; }
     .profile-logo img { max-height: 72px; }
-
     .profile-photos {
       display: flex;
       gap: 10px;
@@ -120,7 +111,6 @@
       border-radius: 4px;
       display: block;
     }
-
     /* ── Bio ──────────────────────────────────────── */
     .bio {
       font-size: 16px;
@@ -128,7 +118,6 @@
       font-weight: 300;
       margin-bottom: 1em;
     }
-
     /* ── Internship notice ────────────────────────── */
     .notice {
       background: #f7f9ff;
@@ -141,7 +130,6 @@
       border-radius: 0 4px 4px 0;
     }
     .notice a { color: #2255bb; }
-
     /* ── Section headings ─────────────────────────── */
     .section-title {
       font-size: 22px;
@@ -151,7 +139,6 @@
       padding-bottom: 0.2em;
       border-bottom: 1.2px solid #aaa;
     }
-
     /* ── Research videos ──────────────────────────── */
     .research-videos {
       display: flex;
@@ -169,7 +156,6 @@
       display: block;
       margin-top: 6px;
     }
-
     /* ── News ─────────────────────────────────────── */
     .news-list {
       list-style: none;
@@ -194,7 +180,17 @@
       white-space: nowrap;
     }
     .news-list a { color: #000; font-weight: 300; text-decoration: underline; }
-
+    /* ── Sub-detail line (instructor, role details) ── */
+    .news-sub {
+      display: block;
+      font-size: 14px;
+      color: #777;
+      font-weight: 300;
+      margin-top: 1px;
+    }
+    /* ── Experience list (wider date column) ──────── */
+    .exp-list .news-date { width: 180px; min-width: 180px; }
+    .exp-list li { margin-bottom: 0.8em; }
     /* ── Students grid ────────────────────────────── */
     .students-grid {
       display: grid;
@@ -219,7 +215,6 @@
     }
     .student-role::before { content: "("; }
     .student-role::after  { content: ")"; }
-
     /* ── Dataset / Systems table ──────────────────── */
     .resource-table {
       width: 100%;
@@ -239,7 +234,6 @@
       font-weight: 300;
       margin: 0;
     }
-
     /* ── Publications ─────────────────────────────── */
     .pub-note {
       font-size: 16px;
@@ -322,7 +316,6 @@
     }
     .pub-links a:hover { border-color: #666; color: #000; }
     .pub-links a.star-badge { border: none; padding: 0; }
-
     .pub-press {
       margin-top: 7px;
       font-size: 14px;
@@ -334,11 +327,9 @@
     }
     .pub-press img { opacity: 0.75; vertical-align: middle; }
     .pub-press a:hover img { opacity: 1; }
-
     .venue-oral { color: #1a55cc; font-weight: 600; }
     .venue-highlight { color: #1a55cc; font-weight: 600; }
     .acceptance { color: #888; font-size: 14px; font-weight: 300; }
-
     /* ── Press Coverage ──────────────────────────── */
     .press-grid {
       display: grid;
@@ -369,7 +360,6 @@
     }
     .press-list li { margin-bottom: 0.7em; }
     .press-list a { color: #000; text-decoration: underline; font-weight: 300; }
-
     /* ── Mobile ───────────────────────────────────── */
     @media (max-width: 680px) {
       #topnav ul {
@@ -382,11 +372,9 @@
         font-size: 12px;
         white-space: nowrap;
       }
-
       .page {
         padding: 20px 16px 60px 16px;
       }
-
       .profile {
         flex-direction: column;
         gap: 16px;
@@ -402,7 +390,6 @@
         font-size: 28px;
         white-space: normal;
       }
-
       .research-videos {
         flex-direction: column;
       }
@@ -411,14 +398,11 @@
         height: auto;
         aspect-ratio: 16/9;
       }
-
       .students-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .resource-table td:first-child { width: 120px; }
       .resource-table img { max-width: 120px; }
-
       .pub-entry {
         flex-direction: column;
         gap: 10px;
@@ -434,13 +418,15 @@
         object-fit: contain;
         margin: 0 auto;
       }
-
+      .exp-list .news-date {
+        min-width: 110px;
+        white-space: normal;
+      }
       .press-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
       }
     }
-
     /* ── Footer ───────────────────────────────────── */
     footer {
       margin-top: 60px;
@@ -455,9 +441,7 @@
     footer a { color: #aaa; }
   </style>
 </head>
-
 <body>
-
 <!-- ── Navigation ─────────────────────────────────── -->
 <nav id="topnav">
   <ul>
@@ -469,9 +453,7 @@
     <li><a href="#teaching">Teaching</a></li>
   </ul>
 </nav>
-
 <div class="page">
-
   <!-- ── Profile ──────────────────────────────────── -->
   <a id="home"></a>
   <div class="profile">
@@ -494,9 +476,7 @@
       <img src="images/Yonwoo.png" alt="Yonwoo Choi">
     </div>
   </div>
-
   <hr style="border:none; border-top:1px solid #ddd; margin-bottom:24px;">
-
   <!-- ── Bio ──────────────────────────────────────── -->
   <p class="bio">
     I am currently fulfilling my alternative military service as an Algorithm Engineer at <a href="https://www.gengen.ai/">GenGenAI</a>, where I work on 3D-based synthetic data generation, working closely with <a href="https://suhwan-cho.github.io/">Suhwan Cho</a> and <a href="https://kimsj0302.github.io/kimsj0302_academic/">Soongjin Kim</a>.
@@ -507,7 +487,6 @@
   <p class="bio">
     I completed my M.S. at <a href="https://cse.snu.ac.kr/en/about/overview">Seoul National University</a> and my B.A. at the <a href="https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs/ba-computer-science">University of Virginia</a>, both in computer science. During my M.S., I was fortunate to be part of the Visual Computing Lab under the supervision of <a href="https://jhugestar.github.io/">Hanbyul Joo</a>. Previously, I have worked at <a href="https://secern.ai/">SECERN AI</a>, working on Animatable 3D Human Avatars.
   </p>
-
   <!-- ── News ─────────────────────────────────────── -->
   <a id="news"></a>
   <div class="section-title">News</div>
@@ -517,13 +496,10 @@
     <li><span class="news-date">Mar 2024</span><span>I started working as a Research Engineer at <a href="https://www.secern.ai/">SECERN AI</a>.</span></li>
     <li><span class="news-date">Feb 2024</span><span>I've <a href="data/snu_diploma.pdf">graduated</a> from SNU with an M.S.</span></li>
   </ul>
-
   <!-- ── Publications ──────────────────────────────── -->
   <a id="publications"></a>
   <div class="section-title">Publications</div>
-
   <ul class="pub-list">
-
     <!-- SVAD -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -542,7 +518,6 @@
         </div>
       </div>
     </li>
-
     <!-- MS Thesis -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -558,15 +533,11 @@
         </div>
       </div>
     </li>
-
   </ul><!-- /pub-list -->
-
   <!-- ── Open Source ───────────────────────────────── -->
   <a id="opensource"></a>
   <div class="section-title">Open Source</div>
-
   <ul class="pub-list">
-
     <!-- SVAD Code -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -585,7 +556,6 @@
         </div>
       </div>
     </li>
-
     <!-- Facebuilder -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -604,7 +574,6 @@
         </div>
       </div>
     </li>
-
     <!-- X-Ray -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -624,7 +593,6 @@
         </div>
       </div>
     </li>
-
     <!-- SMPL Fitting -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -643,7 +611,6 @@
         </div>
       </div>
     </li>
-
     <!-- xR-EgoPose -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -662,7 +629,6 @@
         </div>
       </div>
     </li>
-
     <!-- Multiview Capture -->
     <li class="pub-entry">
       <div class="pub-thumb">
@@ -681,58 +647,48 @@
         </div>
       </div>
     </li>
-
   </ul><!-- /pub-list -->
-
   <!-- ── Work Experience ───────────────────────────── -->
   <a id="experience"></a>
   <div class="section-title">Work Experience</div>
-
-  <ul class="pub-list">
-
-    <!-- GenGenAI -->
-    <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://www.gengen.ai"><img class="logo" src="images/gengen.png" alt="GenGenAI"></a>
-      </div>
-      <div class="pub-body">
-        <div class="pub-title"><a href="https://www.gengen.ai">GenGenAI</a></div>
-        <div class="pub-venue"><em>Algorithm Engineer, September 2025 &ndash; Present</em></div>
-        <div class="pub-desc">
-          - Controllable Image and Video Generation Across Domains
-        </div>
-      </div>
+  <ul class="news-list exp-list">
+    <li>
+      <span class="news-date">Sep 2025 &ndash; Present</span>
+      <span>
+        <strong>Algorithm Engineer</strong> &mdash; <a href="https://www.gengen.ai">GenGenAI</a>
+        <span class="news-sub">Controllable Image and Video Generation Across Domains</span>
+      </span>
     </li>
-
-    <!-- SECERN AI -->
-    <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://www.secern.ai/"><img class="logo" src="images/secern.png" alt="SECERN AI"></a>
-      </div>
-      <div class="pub-body">
-        <div class="pub-title"><a href="https://www.secern.ai/">SECERN AI</a></div>
-        <div class="pub-venue"><em>Research Engineer, March 2024 &ndash; September 2025</em></div>
-        <div class="pub-desc">
-          - Animatable 3D Human Avatars
-        </div>
-      </div>
+    <li>
+      <span class="news-date">Mar 2024 &ndash; Sep 2025</span>
+      <span>
+        <strong>Research Engineer</strong> &mdash; <a href="https://www.secern.ai/">SECERN AI</a>
+        <span class="news-sub">Animatable 3D Human Avatars</span>
+      </span>
     </li>
-
-  </ul><!-- /pub-list -->
-
+  </ul>
   <!-- ── Teaching ──────────────────────────────────── -->
   <a id="teaching"></a>
   <div class="section-title">Teaching</div>
-  <ul class="news-list">
-    <li><span class="news-date">Fall 2023</span><span><strong>Teaching Assistant</strong>, Seoul National University &mdash; 4190.408 001 Artificial Intelligence (Instructor: Hanbyul Joo)</span></li>
-    <li><span class="news-date">Spring 2022</span><span><strong>Teaching Assistant</strong>, Seoul National University &mdash; 4190.773 002 3D Computer Vision (Instructor: Hanbyul Joo)</span></li>
+  <ul class="news-list exp-list">
+    <li>
+      <span class="news-date">Fall 2023</span>
+      <span>
+        <strong>Teaching Assistant</strong> &mdash; Artificial Intelligence
+        <span class="news-sub">Seoul National University &middot; Instructor: Hanbyul Joo</span>
+      </span>
+    </li>
+    <li>
+      <span class="news-date">Spring 2022</span>
+      <span>
+        <strong>Teaching Assistant</strong> &mdash; 3D Computer Vision
+        <span class="news-sub">Seoul National University &middot; Instructor: Hanbyul Joo</span>
+      </span>
+    </li>
   </ul>
-
 </div><!-- /page -->
-
 <footer>
   Latest Update: July 2026 &nbsp;&middot;&nbsp; Template from <a href="https://jhugestar.github.io/">Hanbyul Joo's website</a>
 </footer>
-
 </body>
 </html>
