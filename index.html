@@ -243,6 +243,13 @@
       margin-bottom: 16px;
     }
     .pub-list { list-style: none; padding: 0; }
+    /* two-col: 2 entries per row on wide screens, 1 on narrow */
+    .pub-list.two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+    }
+    .pub-list.two-col .pub-entry:nth-last-child(-n+2) { border-bottom: none; }
     .pub-entry {
       display: flex;
       gap: 20px;
@@ -413,6 +420,8 @@
         flex-direction: column;
         gap: 10px;
       }
+      .pub-list.two-col { grid-template-columns: 1fr; }
+      .pub-list.two-col .pub-entry:nth-last-child(2) { border-bottom: 1px solid #f0f0f0; }
       .pub-thumb {
         width: 100%;
       }
@@ -566,15 +575,12 @@
   <!-- ── Open Source ───────────────────────────────── -->
   <a id="opensource"></a>
   <div class="section-title">Open Source</div>
-  <ul class="pub-list">
+  <ul class="pub-list two-col">
     <!-- SVAD Code -->
     <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://github.com/yc4ny/SVAD"><img src="images/svad_code.png" alt="Single Image to 3D Human Avatar"></a>
-      </div>
       <div class="pub-body">
         <div class="pub-title"><a href="https://github.com/yc4ny/SVAD">Single Image to 3D Human Avatar</a></div>
-        <div class="pub-venue"><em>SECERN AI, May 2025</em></div>
+        <div class="pub-venue"><em>May 2025</em></div>
         <div class="pub-desc">
           - Official Implementation of the paper <a href="https://openaccess.thecvf.com/content/CVPR2025W/SyntaGen/html/Choi_SVAD_From_Single_Image_to_3D_Avatar_via_Synthetic_Data_CVPRW_2025_paper.html">SVAD</a><br>
           - Synthetic Data Generation Pipeline for 3DGS Avatar Training
@@ -587,12 +593,9 @@
     </li>
     <!-- Facebuilder -->
     <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://github.com/yc4ny/facebuilder"><img src="images/facebuilder.png" alt="Facebuilder"></a>
-      </div>
       <div class="pub-body">
         <div class="pub-title"><a href="https://github.com/yc4ny/facebuilder">Facebuilder</a></div>
-        <div class="pub-venue"><em>SECERN AI, March 2025</em></div>
+        <div class="pub-venue"><em>March 2025</em></div>
         <div class="pub-desc">
           - 3D Face Mesh Deformation with Pin-Based Interaction<br>
           - Multiview Face Modeling with Real-time 3D Consistency
@@ -605,12 +608,9 @@
     </li>
     <!-- X-Ray -->
     <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://github.com/yc4ny/xray-3d-detection"><img src="images/xray.png" alt="Multiview X-Ray 3D Object Detector"></a>
-      </div>
       <div class="pub-body">
         <div class="pub-title"><a href="https://github.com/yc4ny/xray-3d-detection">Multiview X-Ray 3D Object Detector</a></div>
-        <div class="pub-venue"><em>SECERN AI, December 2024</em></div>
+        <div class="pub-venue"><em>December 2024</em></div>
         <div class="pub-desc">
           - 9-view Fanbeam Calibration<br>
           - X-Ray Hazardous Objection Detection<br>
@@ -624,12 +624,9 @@
     </li>
     <!-- SMPL Fitting -->
     <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://github.com/yc4ny/SMPL-Fitting"><img src="images/smpl_fitting.png" alt="SMPL Fitting"></a>
-      </div>
       <div class="pub-body">
         <div class="pub-title"><a href="https://github.com/yc4ny/SMPL-Fitting">SMPL Fitting</a></div>
-        <div class="pub-venue"><em>SECERN AI, June 2024</em></div>
+        <div class="pub-venue"><em>June 2024</em></div>
         <div class="pub-desc">
           - Fitting SMPL Parameters to 3D Human Joints<br>
           - Parametric Human Shape and Pose Optimization
@@ -642,12 +639,9 @@
     </li>
     <!-- xR-EgoPose -->
     <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://github.com/yc4ny/xR-EgoPose"><img src="images/xregopose.png" alt="Egocentric Human Pose Estimator"></a>
-      </div>
       <div class="pub-body">
         <div class="pub-title"><a href="https://github.com/yc4ny/xR-EgoPose">Egocentric Human Pose Estimator</a></div>
-        <div class="pub-venue"><em>Visual Computing Lab, December 2023</em></div>
+        <div class="pub-venue"><em>December 2023</em></div>
         <div class="pub-desc">
           - Unofficial Implementation of the Paper <a href="https://arxiv.org/abs/1907.10045">xR-EgoPose</a><br>
           - Egocentric 3D Human Pose Estimation from a Single Fisheye Camera
@@ -660,12 +654,9 @@
     </li>
     <!-- Multiview Capture -->
     <li class="pub-entry">
-      <div class="pub-thumb">
-        <a href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction"><img src="images/stereo.png" alt="Multiview Human Pose Capture System"></a>
-      </div>
       <div class="pub-body">
         <div class="pub-title"><a href="https://github.com/yc4ny/Multi-Camera-3D-Human-Reconstruction">Multiview Human Pose Capture System</a></div>
-        <div class="pub-venue"><em>Visual Computing Lab, April 2022</em></div>
+        <div class="pub-venue"><em>April 2022</em></div>
         <div class="pub-desc">
           - 5 GoPro Camera Setup for 3D Human Reconstruction<br>
           - Camera Calibration with Zhang's Method
