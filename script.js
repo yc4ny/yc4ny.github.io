@@ -44,6 +44,12 @@ function trackCustomEvent(eventName, eventData) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Open publication link buttons in a new tab (skip placeholder "#" links)
+    document.querySelectorAll('.pub-links a:not([href="#"])').forEach(function(a) {
+        a.target = '_blank';
+        a.rel = 'noopener';
+    });
+
     // Track PDF downloads
     document.addEventListener('click', function(e) {
         if (e.target.tagName === 'A' && e.target.href.endsWith('.pdf')) {
