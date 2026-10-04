@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open all links in a new tab, except in-page anchors (nav, placeholders) and mailto
     document.querySelectorAll('a[href]').forEach(function(a) {
         var href = a.getAttribute('href');
-        if (href.indexOf('#') === 0 || href.indexOf('mailto:') === 0) return;
+        if (!href || href.indexOf('#') === 0 || href.indexOf('mailto:') === 0) return;
         a.target = '_blank';
         a.rel = 'noopener';
     });
