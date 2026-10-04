@@ -15,7 +15,7 @@
     gtag('js', new Date());
     gtag('config', 'G-ESLYB8M479');
   </script>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
   <style>
     /* ── Reset & base ─────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -267,6 +267,12 @@
     .pub-thumb img.logo {
       object-fit: contain;
       background: #fff;
+    }
+    /* full: fit to column width, keep natural height, never crop */
+    .pub-thumb img.full,
+    .pub-thumb video.full {
+      max-height: none;
+      object-fit: fill;
     }
     .pub-body { flex: 1; }
     .pub-title {
@@ -545,7 +551,7 @@
     <!-- MS Thesis -->
     <li class="pub-entry">
       <div class="pub-thumb">
-        <a href="data/MSThesis.pdf"><img src="images/wristmounted.png" alt="Wrist Mounted Camera System"></a>
+        <a href="data/MSThesis.pdf"><img class="full" src="images/wristmounted.png?v=2" alt="Wrist Mounted Camera System"></a>
       </div>
       <div class="pub-body">
         <div class="pub-title"><a href="data/MSThesis.pdf">A Wrist Mounted Camera System for Hand Pose Estimation from Single RGB Images</a></div>
