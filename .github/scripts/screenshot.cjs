@@ -2,7 +2,7 @@
 // to .github/screenshot.png. Used by .github/workflows/screenshot.yml.
 //
 // Run locally (needs Node + a global Playwright install):
-//   npm install -g playwright && playwright install chromium
+//   npm install -g playwright && playwright install chrome
 //   NODE_PATH="$(npm root -g)" node .github/scripts/screenshot.cjs
 const path = require("path");
 const { chromium } = require("playwright");
@@ -11,7 +11,9 @@ const INDEX = path.resolve(__dirname, "../../index.html");
 const OUT = path.resolve(__dirname, "../screenshot.png");
 
 (async () => {
-  const browser = await chromium.launch();
+  // Google Chrome ships H.264, Playwright's Chromium does not; without it the
+  // .mp4 thumbnails render as empty boxes.
+  const browser = await chromium.launch({ channel: "chrome" });
   const page = await browser.newPage({
     viewport: { width: 1280, height: 800 },
     deviceScaleFactor: 1,

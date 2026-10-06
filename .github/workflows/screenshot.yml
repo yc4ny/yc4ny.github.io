@@ -30,10 +30,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Playwright (Chromium)
+      # Google Chrome (not Playwright's Chromium) so H.264 .mp4 thumbnails render.
+      - name: Install Playwright + Google Chrome
         run: |
           npm install -g playwright@1.47.2
-          playwright install --with-deps chromium
+          playwright install --with-deps chrome
 
       - name: Render index.html and take a full-page screenshot
         run: NODE_PATH="$(npm root -g)" node .github/scripts/screenshot.cjs
