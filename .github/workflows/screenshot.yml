@@ -1,0 +1,52 @@
+name: Homepage screenshot
+
+# Renders index.html with headless Chromium and publishes a full-page
+# screenshot to the `screenshot` branch, which README.md embeds.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 0 * * 1" # every Monday 00:00 UTC (refreshes star badges etc.)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: homepage-screenshot
+  cancel-in-progress: true
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright (Chromium)
+        run: |
+          npm install -g playwright@1.47.2
+          playwright install --with-deps chromium
+
+      - name: Render index.html and take a full-page screenshot
+        run: |
+          mkdir -p out
+          playwright screenshot \
+            --browser chromium \
+            --viewport-size "1280,800" \
+            --full-page \
+            --wait-for-timeout 4000 \
+            "file://$GITHUB_WORKSPACE/index.html" out/screenshot.png
+
+      - name: Publish to the `screenshot` branch (single commit, force-pushed)
+        run: |
+          cd out
+          git init -q -b screenshot
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add screenshot.png
+          git commit -q -m "Update homepage screenshot ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" screenshot
